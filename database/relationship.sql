@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 07, 2021 at 12:04 PM
+-- Generation Time: May 02, 2021 at 07:19 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel_relationship`
+-- Database: `relationship`
 --
 
 -- --------------------------------------------------------
@@ -207,7 +207,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2021_02_11_111840_create_one_to__manies_table', 8),
 (14, '2021_02_11_111938_create_comments_table', 8),
 (15, '2021_02_13_103720_create_user__categories_table', 9),
-(16, '2021_02_14_083326_create_one_to__many2s_table', 10),
 (17, '2021_02_14_083752_create_one_to_manies_table', 11),
 (18, '2021_02_14_100934_create_one_to_many_inverses_table', 12),
 (19, '2021_02_14_103606_create_many_to_manies_table', 13),
@@ -415,26 +414,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (1, 'Md Aslam', 'aslam@gmail.com', NULL, '$2y$10$2ndl8taLi5Ug1h6gI3oWo.xdBpaNOTOJvwK//y7pvZcwqyLXV44jS', NULL, '2020-12-31 05:33:27', '2020-12-31 05:33:27'),
 (2, 'Md Rahim', 'rahim@gmail.com', NULL, '$2y$10$Cp5bv7cl7LJGsH3sk7NdCeMkGWAVD4Pm0HaQa4U4EPZiV0JYrQBgW', NULL, '2021-02-11 04:59:50', '2021-02-11 04:59:50');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `user__categories`
---
-
-CREATE TABLE `user__categories` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `category_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `user__categories`
---
-
-INSERT INTO `user__categories` (`id`, `user_id`, `category_id`) VALUES
-(1, 1, 1),
-(2, 2, 2);
-
 --
 -- Indexes for dumped tables
 --
@@ -543,12 +522,6 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Indexes for table `user__categories`
---
-ALTER TABLE `user__categories`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -646,12 +619,6 @@ ALTER TABLE `relations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `user__categories`
---
-ALTER TABLE `user__categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 

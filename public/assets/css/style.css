@@ -4,57 +4,8 @@
 
 html, body { height: 100%; margin: 0; background-color: purple;}
 
-.navbar { border: 1px dashed #fff; background-color: whitesmoke;}
-.navbar .m-auto li { margin-left: 12px; }
-
-.navbar-light .navbar-nav .nav-link:hover, 
-.navbar-light .navbar-nav .nav-link:focus { 
-      color: #000; background-color: green; border-radius: 0.25rem;
-   }
-
-
-.border { border: 1px dashed #fff !important; }
-
-
-/* admin page */
-.admin img{ width: 160px; height: 160px; border-radius: 100%;  }
-.adminHome{ border: 1px dashed #fff; padding: 5px; margin: 5px; }
-
-.admin .firstView section { text-align: center; background-color: cyan; border-radius: 20px 0 20px 0;  margin: 5px; padding: 2px; }
-
-.admin .firstView .menu-section .image-thumbnail { 
-   ackground-color: darkslategrey; text-align: center;  padding: -150px; 
-}
-.admin .menu-section { order: 1px solid blue; }
-
-
-.vl { border-left: 2px solid #fff; height: auto; }
-.btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .show > .btn-info.dropdown-toggle {
-    background-color: #181a1b;
-}
-
-.btn-group-sm>.btn, .btn-sm {
-    padding: .5rem .5rem;
-
-}
-
-.home img{ border-radius: 100%; border: 1px solid #fff; }
-
-.space{ padding-bottom: 1.5rem!important;
-  padding-top: 1.5rem !important;
-}
-
-
-.hide{ display: none; }
-
 .table pre { margin: 0rem !important; }
 
-
-/*card design*/
-.card{ margin-top: 15px; }
-.card-header{ padding: 0.2rem 1.25rem; color: #fff; text-align: center;}
-.info{ background-color: #17a2b8; }
-.success{ background-color: #28a745; }
 
 pre {
     display: block;
@@ -71,13 +22,13 @@ pre {
 }
 
 /*Datatable*/
-table.dataTable tbody tr { background-color: transparent; ext-align: center;}
+table.dataTable tbody tr { background-color: transparent; }
 
 .dataTables_wrapper
 .dataTables_length,
 .dataTables_filter,
 .dataTables_info,
-.dataTables_paginate { background-color: cyan; border-radius: 2px; }
+.dataTables_paginate { background-color: cyan; }
 
 .dataTables_wrapper .dataTables_filter,
 .dataTables_wrapper .dataTables_paginate{ float: none; }
@@ -108,6 +59,47 @@ table.dataTable thead td {
 .table tbody > tr >td:nth-child(1),
 .table tbody > tr >td:nth-child(2){ text-align: center; }
 
-.nav { background: #bdc3c7; }
+fieldset {
+   border: 1px dashed skyblue !important;
+   border-radius: 0.50rem;
+   padding: 0 1em 1em 1em !important;
+   margin: 0 0 1.5em 0 !important;
+   -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 2px 0px #000;
+}
+
+legend { 
+    width:inherit;
+    font-size: 1em !important;
+    font-weight: bold !important;
+    text-align: center; !important;
+    border: 1px solid pink; 
+    background-color: whitesmoke;
+    border-radius: 12px;   
+    padding: 0px 10px;
+    /*margin-bottom:10px;*/
+}
+
+/*card design*/
+.card{ margin-top: 15px; border: unset;}
+.card-header{ 
+   padding: 0.2rem 1.25rem; 
+   color: #fff; 
+   text-align: center; 
+   border-radius: unset !important;
+}
+.card-body { padding: 0.2rem 0rem 0rem; background-color: purple; }
+.info{ background-color: #17a2b8; }
+.success{ background-color: #28a745; }
 .d-flex .card { margin-top: 5px !important; }
-.nav-link.active { background-color: #81ecec !important; color: #000 !important; }
+
+/*tab-content design*/
+
+.btn { border-radius: unset; } /*leftside button*/
+
+.nav-tabs .nav-link{ margin-right: 5px; }
+.nav-tabs { border-bottom: unset; }
+.nav-tabs .nav-link:hover { padding: .4rem 0.9rem; background-color: transparent !important; border: 1px solid #fff;}
+.nav-link { color: #fff !important; }
+.nav-tabs .nav-link,
+.nav-tabs .nav-link.active{ border-color: unset; border: unset; border-radius: unset; }
